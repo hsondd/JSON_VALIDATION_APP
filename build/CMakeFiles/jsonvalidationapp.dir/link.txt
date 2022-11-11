@@ -1,0 +1,1 @@
+/usr/bin/g++     CMakeFiles/jsonvalidationapp.dir/src/main.cpp.o  -o jsonvalidationapp  lib/nlohmann_json_schema_validator/libnlohmann_json_schema_validator.a 

@@ -1,0 +1,8 @@
+/home/hson/ws/JSON_VALIDATION_APP/build/CMakeFiles/rebuild_cache.dir
+/home/hson/ws/JSON_VALIDATION_APP/build/CMakeFiles/edit_cache.dir
+/home/hson/ws/JSON_VALIDATION_APP/build/CMakeFiles/jsonvalidationapp.dir
+/home/hson/ws/JSON_VALIDATION_APP/build/lib/nlohmann_json/CMakeFiles/edit_cache.dir
+/home/hson/ws/JSON_VALIDATION_APP/build/lib/nlohmann_json/CMakeFiles/rebuild_cache.dir
+/home/hson/ws/JSON_VALIDATION_APP/build/lib/nlohmann_json_schema_validator/CMakeFiles/rebuild_cache.dir
+/home/hson/ws/JSON_VALIDATION_APP/build/lib/nlohmann_json_schema_validator/CMakeFiles/edit_cache.dir
+/home/hson/ws/JSON_VALIDATION_APP/build/lib/nlohmann_json_schema_validator/CMakeFiles/nlohmann_json_schema_validator.dir
