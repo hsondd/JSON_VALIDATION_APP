@@ -45,7 +45,7 @@ json Config::getConfigSchema()
     return config_schema;
 }
 
-int Config::checkInput()
+int Config::checkInput(json configSchema)
 {
     json input;
     if (!validateFile(this->mInputFileName))
@@ -54,9 +54,7 @@ int Config::checkInput()
     }
     std::ifstream i(this->mInputFileName);
     i >> input;
-
-    json_schema::json_validator validator(this->mSchemaConfigFileName);
-
+    json_schema::json_validator validator(configSchema);
     try
     {
         validator.validate(input); // validate the document - uses the default throwing error-handler
