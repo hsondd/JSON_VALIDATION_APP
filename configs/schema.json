@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+     "title": "updateUser",
+     "type": "object",
+     "additionalProperties": false,
+     "minProperties" : 3,
+     "properties": {
+         "username": {
+             "title": "username",
+             "type": "string",
+             "minLength": 1
+         },
+         "firstName": {
+             "title": "firstName",
+             "type": "string"
+         },
+         "lastName": {
+             "title": "lastName",
+             "type": "string"
+         }
+     },
+     "required": [
+         "username"
+     ]
+}

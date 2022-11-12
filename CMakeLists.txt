@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.8.2 FATAL_ERROR)
 project(JSON_VALIDATOR_APP LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
@@ -24,6 +24,6 @@ target_include_directories(${COMPILATION_PREFIX_EXEC}
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
         )
 target_sources(${COMPILATION_PREFIX_EXEC} PUBLIC ${SOURCES})
-set_target_properties(${COMPILATION_PREFIX_EXEC} PROPERTIES CXX_STANDARD 17)
+set_target_properties(${COMPILATION_PREFIX_EXEC} PROPERTIES CXX_STANDARD 11)
 target_link_libraries(${COMPILATION_PREFIX_EXEC} PUBLIC nlohmann_json::nlohmann_json nlohmann_json_schema_validator)
-# target_compile_definitions(${COMPILATION_PREFIX_EXEC} PUBLIC "CONFIGS_PATH=std::string\(\"${CMAKE_CURRENT_SOURCE_DIR}/configs/\"\)")
+target_compile_definitions(${COMPILATION_PREFIX_EXEC} PUBLIC "INPUT_PATH=std::string\(\"${CMAKE_CURRENT_SOURCE_DIR}/configs/\"\)")

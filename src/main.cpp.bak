@@ -1,0 +1,50 @@
+#include <iostream>
+#include <iomanip>
+#include <iostream>
+#include <filesystem>
+#include <fstream>
+
+#include "config.h"
+#include <nlohmann/json-schema.hpp>
+
+using nlohmann::json;
+using nlohmann::json_schema::json_validator;
+using namespace nlohmann;
+
+static const std::string CONFIG_SCHEMA_PATH = INPUT_PATH + "schema.json";
+static const std::string INPUT_TC_PATH = INPUT_PATH + "input.json";
+
+int main()
+{
+	std::cout << "sondh-1";
+	int status;
+	json_validator validator;
+	json configSchema;
+	Config ValidateUser = Config(CONFIG_SCHEMA, INPUT_TC_PATH);
+	std::cout << "sondh0";
+
+	configSchema = ValidateUser.getConfigSchema();
+	std::cout << "sondh1";
+
+	std::string xxx = ValidateUser.getName();
+	std::cout << "sondh2";
+
+	try
+	{
+		std::cout << "sondh3";
+		validator.set_root_schema(configSchema); // insert root-schema
+	}
+	catch (const std::exception &e)
+	{
+
+		std::cerr << "Validation of schema failed, here is why: " << e.what() << "\n";
+		// return EXIT_FAILURE;
+	}
+
+	if (status = ValidateUser.checkInput() != 0)
+	{
+		return status;
+	}
+
+	return EXIT_SUCCESS;
+}
